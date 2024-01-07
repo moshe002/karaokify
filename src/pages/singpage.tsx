@@ -30,7 +30,7 @@ function singpage() {
       try{
         await fetch(`https://youtube.googleapis.com/youtube/v3/search?part=snippet&channelId=${YOUTUBE_CHANNEL_ID}&channelType=any&q=${song.toLowerCase()}&key=${API_KEY}`)
         .then(response => response.json())
-        .then(data => console.log(data.items[0].id.videoId))
+        .then(data => setVideoId(data.items[0].id.videoId))
       } catch(e) {
         console.error(e);
       }
@@ -46,14 +46,8 @@ function singpage() {
     <div className="flex flex-col items-center text-white h-screen bg-slate-900">
         <Header text={`Chosen song: ${song}`} />
         <div className="flex flex-col items-center w-screen h-screen p-3">
-          <div className="h-[60%] w-[60%] border-2">
-            <p>video</p>
-            {
-            // <video className="h-[60%] w-[60%]" title="karaoke_song">
-            //   <source src={`https://www.youtube.com/watch?v=${videoId}`} type="video/mp4" />
-            //   Your browser does not support the video tag.
-            // </video>
-            }
+          <div className="h-[70%] w-[60%] border-2">
+            <iframe className="border-2 w-full h-full" src={`https://www.youtube.com/embed/${videoId}`} title="karaoke_song" data-allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen></iframe>
           </div>
         </div>
     </div>
