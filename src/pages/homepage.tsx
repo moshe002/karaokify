@@ -1,7 +1,7 @@
 import Title from "../components/homepageTitle";
 import Input from "../components/input";
 import SongBookButton from "../components/songBookButton";
-import AudioVolume from '../components/controlAudio';
+import AudioVisualize from '../components/audioVisualizer';
 import { AudioStart } from '../AudioStart';
 
 interface HomeProps {
@@ -18,7 +18,7 @@ function homepage({ song, setSong }: HomeProps) {
       <Title />     
       <Input song={song} setSong={setSong} />
       <SongBookButton />
-      <AudioVolume />
+      <AudioVisualize bgColor="#0f172a" />
     </div>
   )
 }

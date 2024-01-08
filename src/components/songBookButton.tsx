@@ -5,7 +5,7 @@ function songBookButton() {
   const nav = useNavigate();
 
     return (
-    <div className="flex flex-col items-center gap-3 mt-5">
+    <div className="flex flex-col items-center gap-3 mt-5 mb-10">
         <h1 className="text-green-800 font-medium">Search for songs here:</h1>
         <button type="button" onClick={() => {
           nav("/songbook") 
