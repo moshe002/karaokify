@@ -34,7 +34,7 @@ function AudioStart() {
 
             //await context.resume();
 
-            console.log('Audio started.');
+            //console.log('Audio started.');
             //console.log(gainNode)
         } catch (error) {
             console.error('Error starting audio:', error);

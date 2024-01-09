@@ -7,7 +7,7 @@ interface VisualizerProps {
 function audioVisualizer({ bgColor }: VisualizerProps) {
 
   return (
-    <div className='flex items-center w-[10%] border-b-2 border-x-2 rounded-md border-green-800'>
+    <div className='flex items-center w-[20%] border-b-2 border-x-2 rounded-md border-green-800'>
       <AudioVisualizer
         mode="wave" // grid, bars, wave
         height="50px"

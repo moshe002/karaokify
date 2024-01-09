@@ -12,7 +12,8 @@ function input({song, setSong}: InputProps) {
   const inputtedSong = (e:React.SyntheticEvent) => {
     e.preventDefault();
     //console.log(song); // prints the inputted song in the console
-    nav('/sing')
+    nav('/sing');
+    //setSong('');
   };
 
   return (

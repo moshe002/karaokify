@@ -4,6 +4,7 @@ import { useNavigate } from "react-router-dom";
 
 import Header from "../components/header";
 import Error from "../components/error";
+import Note from "../components/note";
 
 function singpage() {
 
@@ -53,6 +54,7 @@ function singpage() {
             <div className="h-[70%] w-[60%] mt-10">
               <iframe className="rounded-md w-full h-full" src={`https://www.youtube.com/embed/${videoId}`} title="karaoke_song" data-allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen></iframe>
             </div>
+            <Note />
           </div>
       </div>
     </>
