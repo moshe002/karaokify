@@ -33,7 +33,10 @@ function singpage() {
       try{
         await fetch(`https://youtube.googleapis.com/youtube/v3/search?part=snippet&channelId=${YOUTUBE_CHANNEL_ID}&channelType=any&q=${song.toLowerCase()}&key=${API_KEY}`)
         .then(response => response.json())
-        .then(data => setVideoId(data.items[0].id.videoId))
+        .then(data => {
+          //console.log(data)
+          setVideoId(data.items[0].id.videoId)
+        })
       } catch(error:any) {
         setIsError(true);
         setErrorMessage(error.message);
