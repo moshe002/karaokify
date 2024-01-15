@@ -14,7 +14,7 @@ function App() {
       <SongContext.Provider value={song}>
         <Routes>
           <Route path="/" element={<Homepage setSong={setSong} song={song} />} />
-          <Route path="/songbook" element={<SongBook />} />
+          <Route path="/songbook" element={<SongBook setSong={setSong} />} />
           <Route path="/sing" element={<Singpage />} />
         </Routes>
       </SongContext.Provider>
