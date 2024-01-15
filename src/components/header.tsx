@@ -7,7 +7,7 @@ interface HeaderProps {
     text: string;
 }
 
-function header({text}:HeaderProps) {
+function header({ text }: HeaderProps) {
 
   const nav = useNavigate();
 
@@ -22,7 +22,7 @@ function header({text}:HeaderProps) {
           title="back_button">
             <FaChevronLeft />
         </button>
-        <h1 className="text-4xl font-medium">{text}</h1>
+        <h1 className="text-xl font-medium">{text}</h1>
         <AudioVisualize bgColor="#1e293b" />
     </div>
   )

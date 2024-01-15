@@ -97,11 +97,11 @@ function songBook({ setSong } : SongBookProps) {
             result.map((data, index) => {
               const songs = data.snippet.title
               return(
-                <li key={index}>
+                <li className='p-1 text-slate-500 hover:text-white duration-150' key={index}>
                   <button onClick={() => {
                     setSong(songs)
                     nav('/sing')
-                  }} type='button'>{songs}
+                    }} type='button'>{songs}
                   </button>
                 </li>
               )
